@@ -1,0 +1,118 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  margin: 80px 10%; /* fluid margin */
+}
+
+.contact-title {
+  position: relative;
+  text-align: center;
+}
+
+.contact-title h1 {
+  padding: 0 20px;
+  font-size: clamp(2.5rem, 6vw, 5rem); /* fluid title */
+  font-weight: 600;
+}
+
+.contact-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 80px;
+}
+
+.contact-content {
+  display: flex;
+  gap: 100px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* ✅ stack on small screens */
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-left h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  background: linear-gradient(270deg, #df8908, #b415ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-left p {
+  max-width: 500px;
+  color: #d8d8d8;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #d8d8d8;
+  font-size: 1rem;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-right label {
+  color: #d8d8d8;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contact-right input,
+.contact-right textarea {
+  border: none;
+  width: 100%; /* ✅ fluid width */
+  padding: 16px;
+  border-radius: 6px;
+  background: #32323c;
+  color: #a0a0a0;
+  font-family: Outfit, sans-serif;
+  font-size: 1rem;
+}
+
+.contact-right textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-submit {
+  border: none;
+  color: white;
+  border-radius: 50px;
+  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 108.28%);
+  font-size: 1.2rem;
+  padding: 16px 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contact-submit:hover {
+  transform: scale(1.05);
+}

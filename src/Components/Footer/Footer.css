@@ -1,0 +1,19 @@
+.footer {
+  width: 100%;
+  padding: 20px 10px;
+  background: #1a1a1a;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.footer p {
+  color: #d8d8d8;
+  font-size: clamp(0.75rem, 1.5vw, 1rem); /* fluid font size */
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.footer p:hover {
+  color: #ffffff;
+}

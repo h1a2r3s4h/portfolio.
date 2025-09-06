@@ -1,0 +1,187 @@
+/* ===========================
+   General Reset
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #161513;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===========================
+   Logo
+=========================== */
+.logo-text {
+  font-size: clamp(1.6rem, 2.5vw, 2.6rem);
+  font-weight: 800;
+  background: linear-gradient(90deg, #a21caf, #ec4899, #f43f5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 10px rgba(236, 72, 153, 0.4);
+}
+
+/* ===========================
+   Navbar
+=========================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px clamp(15px, 5vw, 100px);
+  padding: 14px 22px;
+  border-radius: 15px;
+
+  background: rgba(25, 25, 25, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6),
+              inset 0 2px 6px rgba(255, 255, 255, 0.1);
+
+  position: relative;
+  z-index: 50;
+  transition: transform 0.3s ease;
+}
+
+.navbar:hover {
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   Hamburger Menu (Mobile)
+=========================== */
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+/* ===========================
+   Nav Menu
+=========================== */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: clamp(20px, 5vw, 50px);
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-menu li p {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu li:hover p {
+  transform: translateY(-2px);
+  color: #b923e1;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+
+/* ===========================
+   Right Section
+=========================== */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Connect Button */
+.nav-connect {
+  padding: 10px 22px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #da7c25, #b923e1);
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(185, 35, 225, 0.4);
+  white-space: nowrap;
+}
+
+.nav-connect:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Social Icons */
+.nav-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px) scale(1.15);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 1024px) {
+  .nav-menu {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(20, 20, 20, 0.95);
+    padding: 20px 0;
+    border-radius: 0 0 15px 15px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .nav-menu.open {
+    max-height: 400px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-right {
+    display: none; /* hide right section on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,170 @@
+.mywork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 80px 10vw;
+}
+
+/* Title */
+.mywork-title {
+  position: relative;
+  text-align: center;
+}
+
+.mywork-title h1 {
+  padding: 0 20px;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.mywork-title img {
+  position: absolute;
+  bottom: -10px;
+  right: 50px;
+  width: clamp(100px, 20vw, 200px);
+  z-index: -1;
+}
+
+/* Work grid */
+.mywork-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+/* Each project card */
+.work-card {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Project Image */
+.work-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.work-img:hover {
+  transform: scale(1.05);
+  border-bottom: 4px solid #ff00ff;
+}
+
+/* Project Info */
+.work-title {
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  font-weight: 700;
+  margin: 12px 0 6px;
+}
+
+.work-desc {
+  font-size: clamp(0.8rem, 1.4vw, 0.95rem);
+  color: #bbb;
+  margin: 0 12px 12px;
+  min-height: 40px;
+}
+
+/* Links */
+.work-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.work-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #fff;
+  background: #222;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.work-link:hover {
+  background: #333;
+  color: #ff00ff;
+}
+
+/* Show More */
+.mywork-showmore {
+  display: flex;
+  gap: 15px;
+  border-radius: 50px;
+  border: 2px solid white;
+  padding: 20px 50px;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 500;
+  margin-bottom: 60px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.mywork-showmore:hover {
+  gap: 30px;
+}
+
+/* ===========================
+   Media Queries
+=========================== */
+@media (max-width: 1024px) {
+  .mywork {
+    margin: 60px 8vw;
+    gap: 50px;
+  }
+
+  .mywork-container {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mywork {
+    margin: 50px 6vw;
+    gap: 40px;
+  }
+
+  .work-img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mywork {
+    margin: 40px 5vw;
+    gap: 30px;
+  }
+
+  .work-img {
+    height: 150px;
+  }
+
+  .work-desc {
+    min-height: auto;
+  }
+
+  .mywork-showmore {
+    font-size: 0.9rem;
+    padding: 12px 24px;
+  }
+}

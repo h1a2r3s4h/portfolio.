@@ -1,0 +1,149 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 80px 10%; /* fluid margin */
+  text-align: center;
+}
+
+/* ===== Title ===== */
+.about-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-title h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem); /* responsive font */
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+
+.about-title img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: clamp(80px, 15vw, 160px); /* scales image */
+  opacity: 0.8;
+}
+
+/* ===== Description ===== */
+.about-para p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  line-height: 1.8;
+  color: #e2e8f0;
+  padding: 0 10px; /* small padding for mobile */
+}
+
+/* ===== Tabs ===== */
+.skills-tabs {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0 10px 0;
+  justify-content: center;
+  flex-wrap: wrap; /* ✅ wrap for mobile */
+}
+
+.skills-tabs button {
+  padding: 8px 20px;
+  border-radius: 25px;
+  border: none;
+  background: transparent;
+  color: #e2e8f0;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skills-tabs button:hover {
+  color: #a78bfa;
+}
+
+.skills-tabs button.active {
+  background: #7c3aed;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ===== Skills Grid ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 10px;
+}
+
+.skill-card {
+  background: #0f172a;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f1f5f9;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  background: #1e293b;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+}
+
+/* ===== Responsive Breakpoints ===== */
+@media (max-width: 1024px) {
+  .about {
+    margin: 60px 8%;
+  }
+
+  .skills-grid {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    margin: 50px 6%;
+    gap: 30px;
+  }
+
+  .about-para p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .skills-tabs button {
+    padding: 6px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    margin: 40px 5%;
+    gap: 25px;
+  }
+
+  .about-title h1 {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* ✅ 2 per row on mobile */
+    gap: 10px;
+  }
+
+  .skill-card {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,23 @@
+.bubble {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 255, 150, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: scale(0);
+
+  /* Glow effect */
+  box-shadow: 0 0 15px rgba(0, 255, 150, 0.8),
+              0 0 30px rgba(0, 255, 150, 0.6),
+              0 0 45px rgba(0, 255, 150, 0.4);
+
+  animation: bubble-pop 1s ease-out forwards;
+}
+
+@keyframes bubble-pop {
+  to {
+    transform: scale(8);
+    opacity: 0;
+  }
+}
