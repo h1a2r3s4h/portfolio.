@@ -30,26 +30,31 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hero-container">
+    <section id="home" className="hero-container">
       <ParticlesBackground /> {/* Motion Background */}
       <div className="hero">
+        {/* Profile */}
         <div className="profile-img-wrapper">
           <div className="rotating-border"></div>
           <img src={profile_img} alt="Profile" className="profile-img" />
         </div>
 
+        {/* Headline */}
         <h1>
-          <span className="highlight">I'm Harshit Gangwar,</span>{" "}
+          <span className="highlight">I'm Harshit Gangwar</span>
+          <br />
           <span ref={typedEl}></span>
         </h1>
 
+        {/* Subtitle */}
         <p>
-          I'm a Third-year B.Tech student passionate about web development. I
-          enjoy building clean, responsive websites and constantly explore new
-          technologies to improve my skills and create better user experiences.
+          A Third-year B.Tech student passionate about web development. I enjoy
+          building clean, responsive websites and constantly exploring new
+          technologies to improve my skills and create impactful user
+          experiences.
         </p>
 
-        {/* ✅ Action Buttons */}
+        {/* Action Buttons */}
         <div className="hero-action">
           <div className="hero-connect">
             <AnchorLink className="anchor-link" offset={50} href="#contact">
@@ -63,7 +68,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

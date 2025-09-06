@@ -189,4 +189,31 @@ body {
   .nav-menu {
     font-size: 14px;
   }
+
+
+}
+/* ===========================
+   Social Icon Colors
+=========================== */
+
+/* LinkedIn Blue */
+.social-icon.linkedin svg {
+  color: #0a66c2; /* LinkedIn official blue */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-icon.linkedin:hover svg {
+  color: #0a66c2;
+  text-shadow: 0 0 10px rgba(10, 102, 194, 0.8);
+}
+
+/* GitHub White */
+.social-icon.github svg {
+  color: #ffffff; /* GitHub white */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-icon.github:hover svg {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
