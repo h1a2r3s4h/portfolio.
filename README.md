@@ -1,12 +1,67 @@
-# React + Vite
+# 🌐 Personal Portfolio - Harshit Gangwar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website!  
+This project showcases my skills, projects, and experience as a **Full Stack Developer**.  
+It is built with **React.js** and styled with modern, responsive design principles.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo  
+👉 [View Portfolio](https://your-portfolio-link.vercel.app)  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features  
+- 🎨 **Modern UI/UX** with smooth animations and gradients  
+- 📱 **Fully Responsive** across all devices (desktop, tablet, mobile)  
+- 🎭 **Interactive Hero Section** with typing animation  
+- 🔗 **Smooth Scroll Navigation** with sticky navbar  
+- 💡 **Projects Showcase** section with my best work  
+- 📬 **Contact Form & Social Links** for easy reach  
+
+---
+
+## 🛠️ Tech Stack  
+- **Frontend:** React.js, JavaScript (ES6+), HTML5, CSS3  
+- **Styling:** Custom CSS, Responsive Design, Gradient Effects  
+- **Icons & Animations:** Lucide React, Typed.js, CSS Animations  
+- **Deployment:** Vercel / Netlify  
+
+---
+
+## 📂 Project Structure  
+portfolio/
+│── public/ # Static assets
+│── src/
+│ ├── assets/ # Images, icons, resume, etc.
+│ ├── Components/ # Reusable React components
+│ │ ├── Navbar/
+│ │ ├── Hero/
+│ │ ├── About/
+│ │ ├── MyWork/
+│ │ ├── Contact/
+│ │ ├── Footer/
+│ │ └── BubbleEffect/
+│ ├── App.jsx # Main app component
+│ └── index.js # Entry point
+│── package.json
+│── README.md
+
+
+## ⚡ Getting Started  
+
+### 1. Clone the repository  
+```bash
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+
+ ### 2. Install dependencies
+```bash
+npm install
+
+3. Run locally
+npm start
+App will be running at http://localhost:3000
+
+4. Build for production
+npm run build
