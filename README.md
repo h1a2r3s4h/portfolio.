@@ -52,12 +52,18 @@ portfolio/
 
 ### 1. Clone the repository  
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/h1a2r3s4h/portfolio.git
 cd portfolio
+```
 
+### 2. Install dependencies
+```bash
 npm install
-
-npm run build
+```
+### 3. Run locally
+```bash
+npm run start
+```
 
 npm run build
 
