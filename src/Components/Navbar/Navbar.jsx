@@ -1,12 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import underline from "../../assets/nav_underline.svg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { Linkedin, Github, Menu, X } from "lucide-react"; // ✅ Added menu icons
+import { Linkedin, Github, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
-  const [isOpen, setIsOpen] = useState(false); // ✅ Mobile menu toggle
+  const [isOpen, setIsOpen] = useState(false);
+
+  // ✅ Track active section on scroll
+  useEffect(() => {
+    const sections = ["home", "about", "portfolio", "contact"];
+
+    const handleScroll = () => {
+      const scrollPos = window.scrollY + 150; // offset for navbar height
+
+      for (let id of sections) {
+        const el = document.getElementById(id);
+        if (el) {
+          const { offsetTop, offsetHeight } = el;
+          if (scrollPos >= offsetTop && scrollPos < offsetTop + offsetHeight) {
+            setMenu(id);
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav className="navbar">
@@ -28,10 +50,14 @@ const Navbar = () => {
               href={`#${item}`}
               onClick={() => {
                 setMenu(item);
-                setIsOpen(false); // Close menu on click
+                setIsOpen(false); // ✅ Close mobile menu
               }}
             >
-              <p>{item === "about" ? "About Me" : item.charAt(0).toUpperCase() + item.slice(1)}</p>
+              <p>
+                {item === "about"
+                  ? "About Me"
+                  : item.charAt(0).toUpperCase() + item.slice(1)}
+              </p>
             </AnchorLink>
             {menu === item && <img src={underline} alt="underline" />}
           </li>
@@ -41,7 +67,12 @@ const Navbar = () => {
       {/* Right Section */}
       <div className="nav-right">
         <div className="nav-connect">
-          <AnchorLink className="anchor-link" offset={50} href="#contact">
+          <AnchorLink
+            className="anchor-link"
+            offset={50}
+            href="#contact"
+            onClick={() => setIsOpen(false)}
+          >
             Connect with Me
           </AnchorLink>
         </div>
@@ -57,7 +88,7 @@ const Navbar = () => {
             <Linkedin size={24} />
           </a>
           <a
-            href="https://github.com/your-github"
+            href="https://github.com/h1a2r3s4h"
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon github"

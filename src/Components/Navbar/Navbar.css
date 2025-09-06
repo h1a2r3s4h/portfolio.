@@ -29,10 +29,16 @@ body {
    Navbar
 =========================== */
 .navbar {
+  position: sticky;   /* or fixed */
+  top: 0;
+  left: 0;
+  width: calc(100% - clamp(30px, 10vw, 200px)); /* keeps margin */
+  margin: 20px auto;
+  z-index: 1000;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px clamp(15px, 5vw, 100px);
   padding: 14px 22px;
   border-radius: 15px;
 
@@ -42,10 +48,9 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6),
               inset 0 2px 6px rgba(255, 255, 255, 0.1);
 
-  position: relative;
-  z-index: 50;
   transition: transform 0.3s ease;
 }
+
 
 .navbar:hover {
   transform: translateY(-2px);
