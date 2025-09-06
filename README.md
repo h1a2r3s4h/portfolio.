@@ -7,7 +7,7 @@ It is built with **React.js** and styled with modern, responsive design principl
 ---
 
 ## 🚀 Live Demo  
-👉 [View Portfolio](https://your-portfolio-link.vercel.app)  
+👉 [View Portfolio](https://portfolio-vsas.vercel.app/)  
 
 ---
 
@@ -55,13 +55,9 @@ portfolio/
 git clone https://github.com/yourusername/portfolio.git
 cd portfolio
 
- ### 2. Install dependencies
-```bash
 npm install
 
-3. Run locally
-npm start
-App will be running at http://localhost:3000
-
-4. Build for production
 npm run build
+
+npm run build
+
