@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌐 Personal Portfolio - Harshit Gangwar
 
 Welcome to my personal portfolio website!  
@@ -67,3 +68,6 @@ npm run start
 
 
 
+=======
+
+>>>>>>> 07a65e3 (add resume)
