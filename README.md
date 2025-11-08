@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🌐 Personal Portfolio - Harshit Gangwar
 
 Welcome to my personal portfolio website!  
