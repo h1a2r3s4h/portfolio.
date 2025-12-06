@@ -5,18 +5,15 @@ import About from "./Components/About/About";
 import MyWork from "./Components/MyWork/MyWork";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
-import BubbleEffect from "./Components/BubbleEffect/BubbleEffect";
-import SnakeCursor from "./Components/SnakeCursor/SnakeCursor"; // 🐍 Custom Snake Cursor
+
 
 const App = () => {
   return (
     <div>
-      {/* 🐍 Beautiful Snake Trail Cursor */}
-      <SnakeCursor />
+      
 
       {/* 🌐 Navbar and Visual Effects */}
       <Navbar />
-      <BubbleEffect />
 
       {/* 🏠 Home Section */}
       <section id="home">
