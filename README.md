@@ -68,6 +68,4 @@ npm run start
 
 
 
-=======
 
->>>>>>> 07a65e3 (add resume)
